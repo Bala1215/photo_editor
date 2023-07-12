@@ -82,6 +82,14 @@ function App() {
   const [selectedOptionIndex , setSelectedOptionIndex] = useState(0);
   const selectedOption  = options[selectedOptionIndex]
 
+  /**
+   * The function iterates over the previous options,
+   * and if the index of the option does not match the index of the selected option, 
+   * it returns the previous option. 
+   * Otherwise, it returns a new option with the same properties as the previous option, 
+   * except with the new value.
+   */
+  
   const handleSliderChange = ({target})=>{
        setOptions(prevOptions=>{
         return prevOptions.map((option,index)=>{
